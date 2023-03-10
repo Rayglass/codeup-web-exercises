@@ -1,68 +1,80 @@
 
 "use strict";
 
-//console.log('Hello from External JavaScript!');
+console.log('Hello from External JavaScript!');
 
-//alert('Welcome to my Website!')
+alert('Welcome to my Website!')
 
-//var color = "";
-//while (color === "")
-  //  color = prompt('What is your favorite color?');
-//console.log(color);
+var color = "";
+while (color === "")
+    color = prompt('What is your favorite color?');
+console.log(color);
 
-// alert('Great, ' + color + ' is my favorite color too!');
+alert('Great, ' + color + ' is my favorite color too!');
 
-/**
-var littleMermaid = "";
-while (littleMermaid === "")
-littleMermaid = prompt('How many days do you want to rent Little Mermaid?');
-console.log(littleMermaid);
-var brotherBear = "";
-while (brotherBear === "")
-    brotherBear = prompt('How many days do you want to rent Brother Bear?');
-console.log(brotherBear);
-var hercules = "";
-while (hercules === "")
-    hercules = prompt('How many days do you want to rent Hercules?');
-console.log(hercules);
 
-var moviePrice = 3
-var littleMermaidTotal = littleMermaid * moviePrice;
-var brotherBearTotal = brotherBear * moviePrice;
-var herculesTotal = hercules * moviePrice;
-var movieTotal = littleMermaidTotal + brotherBearTotal + herculesTotal;
+//.....................................
 
-console.log(littleMermaid)
-console.log(brotherBear)
-console.log(hercules)
-console.log(movieTotal)
 
-alert(movieTotal + ' dollars is your total cost.')
+var littleMermaidDays = Number(prompt('How many days would you like to rent The Little Mermaid?'));
+console.log("user entered " + littleMermaidDays);
 
- */
+var brotherBearDays = Number(prompt('How many days would you like to rent Brother Bear?'));
+console.log("user entered " + brotherBearDays);
 
-var littleMermaid = "";
-while (littleMermaid === "")
-    littleMermaid = prompt('How many days do you want to rent Little Mermaid?');
-console.log(littleMermaid);
-var brotherBear = "";
-while (brotherBear === "")
-    brotherBear = prompt('How many days do you want to rent Brother Bear?');
-console.log(brotherBear);
-var hercules = "";
-while (hercules === "")
-    hercules = prompt('How many days do you want to rent Hercules?');
-console.log(hercules);
+var herculesDays = Number(prompt('How many days would you like to rent Hercules?'));
+console.log("user entered " + herculesDays);
 
-var moviePrice = 3
-var littleMermaidTotal = littleMermaid * moviePrice;
-var brotherBearTotal = brotherBear * moviePrice;
-var herculesTotal = hercules * moviePrice;
-var movieTotal = littleMermaidTotal + brotherBearTotal + herculesTotal;
+var costPerDay = Number(prompt("How much does a single movie cost to rent per day?"));
 
-console.log(littleMermaid)
-console.log(brotherBear)
-console.log(hercules)
-console.log(movieTotal)
+var totalCost = (herculesDays + brotherBearDays + littleMermaidDays) * costPerDay;
 
-alert(movieTotal + ' dollars is your total cost.')
+console.log(totalCost);
+
+alert('The total cost is $' + totalCost + ' for your movies');
+
+
+//.....................................
+
+
+
+var googleHours = Number(prompt('How many hours did you work for Google?'));
+var googlePay =  Number(prompt('How much do you make an hourly for Google?'));
+console.log('Total Google Pay is $' + (googleHours * googlePay));
+
+var amazonHours = Number(prompt('How many hours did you work for Amazon?'));
+var amazonPay = Number(prompt('How much do you make an hourly for Amazon?'));
+console.log('Total Amazon Pay is $' + (amazonHours * amazonPay));
+
+var fbHours =  Number(prompt('How many hours did you work for Facebook?'));
+var fbPay = Number(prompt('How much do you make an hourly for Facebook?'));
+console.log('Total Facebook Pay is $' + (fbHours * fbPay));
+
+var totalPay = (googleHours * googlePay) + (amazonHours * amazonPay) + (fbHours * fbPay);
+console.log('Total Pay is $' + (totalPay));
+alert('Your total weekly income is $' + totalPay);
+
+
+//.....................................
+
+
+var classIsNotFull = confirm("Class is not full");
+var noScheduleConflicts = confirm("schedules do not conflict");
+
+var studentEnrolled = classIsNotFull && noScheduleConflicts;
+console.log(studentEnrolled);
+console.log("class not full " + classIsNotFull);
+console.log("schedules do not conflict " + noScheduleConflicts);
+
+alert("Student can enroll: " + studentEnrolled);
+
+
+
+//.....................................
+
+
+var numberOfItems = Number(prompt("How many items in cart?")); //Number
+var validOffer = confirm("Is the offer valid?"); //boolean - true - false
+var premium = confirm("Does customer have premium membership?"); //boolean
+var discountApplied = validOffer && (premium || numberOfItems > 2);
+alert("Can use discount: " + discountApplied);
