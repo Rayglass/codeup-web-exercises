@@ -5,9 +5,7 @@ console.log('Hello from External JavaScript!');
 
 alert('Welcome to my Website!')
 
-var color = "";
-while (color === "")
-    color = prompt('What is your favorite color?');
+var color = prompt('What is your favorite color?');
 console.log(color);
 
 alert('Great, ' + color + ' is my favorite color too!');
