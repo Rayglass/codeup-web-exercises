@@ -22,36 +22,67 @@
  * console.logging the function's return value
  */
 
-function colorOpinions (){
-    var colorPrompt = prompt("What is your favorite color?");
+
+/*function analyzeColor (colorPrompt){
+    // var colorPrompt = prompt("What is your favorite color?"); *needs to be outside of local.
         if(colorPrompt === "blue"){
-            alert("Blue is the color of the sky.");
-        }else if(colorPrompt === "red"){
-            alert("Strawberries are red");
+            return("Blue is the color of the sky.");
+        } else if(colorPrompt === "red"){
+            return("Strawberries are red");
         } else if(colorPrompt === "cyan"){
-            alert("I don\'t know anything about Cyan");
+            return("I don't know anything about Cyan");
+        } else{
+            return("The color you entered is undefined, I will have to get back to you on that!");
         }
-         else{
-            alert("The color you entered is undefined, I will have to get back to you on that!");
-         }
 }
-console.log(colorOpinions());
+
+var colorPrompt = prompt("What is your favorite color?");
+
+console.log(analyzeColor(colorPrompt));*/
+
+// ----------------------------------------------------------------------------------------
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
+/*
+function randomColorChoice(colors){
+   return randomColor;
+}
+console.log(randomColorChoice());
+*/
 
+/*var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
+function analyzeColor (randomColor){
+        if(randomColor === "blue"){
+            return("Blue is the color of the sky.");
+        } else if(randomColor === "red"){
+            return("Strawberries are red");
+        } else if(randomColor === "cyan"){
+            return("I don't know anything about Cyan");
+        } else{
+            return("The color you entered is undefined, I will have to get back to you on that!");
+        }
+}
+
+alert(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));*/
+
+// ----------------------------------------------------------------------------------------
 
 /**
  * TODO:
@@ -59,8 +90,31 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 
+//Switch Statement
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+// function analyzeColors() {
+//     switch (randomColor) {
+//         case "blue":
+//             return("Blue is the color of the sky.");
+//             break;
+//         case "red":
+//             return("Strawberries are Red.");
+//             break;
+//         case "cyan":
+//             return("I don't know anything about Cyan.");
+//             break;
+//         default:
+//             return(randomColor + " is undefined, I will have to get back to you on that!");
+//             break;
+//     }
+// }
+// console.log(analyzeColors());
+// alert(analyzeColors());
 
 
+/* ########################################################################## */
 
 /**
  * TODO:
@@ -68,6 +122,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+
+/*var colorPrompt = prompt("What is your favorite color?");
+function analyzeColors() {
+    switch (colorPrompt) {
+        case "blue":
+            return("Blue is the color of the sky.");
+            break;
+        case "red":
+            return("Strawberries are Red.");
+            break;
+        case "cyan":
+            return("I don't know anything about Cyan.");
+            break;
+        default:
+            return(colorPrompt + " is undefined, I will have to get back to you on that!");
+            break;
+    }
+}
+console.log(analyzeColors());
+alert(analyzeColors());*/
+
+
 
 /* ########################################################################## */
 
@@ -91,16 +168,49 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-/**
- * TODO:
- * Uncomment the line below to generate a random number between 0 and 5.
- * (In this line of code, 0 is inclusive, and 6 is exclusive)
- * Prompt the user for their total bill, then use your `calculateTotal` function
- * and alerts to display to the user what their lucky number was, what their
- * price before the discount was, and what their price after the discount is.
- */
+function calculateTotal(luckyNumber, totalAmount){
+    switch(luckyNumber) {
+        case 0:
+            return totalAmount;
+            break;
+        case 1:
+            return (totalAmount) - (totalAmount * .10);
+            break;
+        case 2:
+            return (totalAmount) - (totalAmount * .25);
+            break;
+        case 3:
+            return (totalAmount) - (totalAmount * .35);
+            break;
+        case 4:
+            return (totalAmount) - (totalAmount * .50);
+            break;
+        case 5:
+            return 0;
+            break;
+        default:
+            alert("Discount unavailable at this time");
+            break;
+    }
+}
+
+//  * TODO:
+//  * Uncomment the line below to generate a random number between 0 and 5.
+//  * (In this line of code, 0 is inclusive, and 6 is exclusive)
+//  * Prompt the user for their total bill, then use your `calculateTotal` function
+//  * and alerts to display to the user what their lucky number was, what their
+//  * price before the discount was, and what their price after the discount is.
+//  *!/
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+
+var luckyNumber = Math.floor(Math.random() * 6);
+console.log(luckyNumber + " is the lucky number");
+var totalAmount = Number(prompt("What was your bill amount?"));
+
+var result = calculateTotal(luckyNumber, totalAmount)
+alert(result + " is your total cost after discount!");
+console.log(result + " is your total cost after discount!");
+
 
 /**
  * TODO:

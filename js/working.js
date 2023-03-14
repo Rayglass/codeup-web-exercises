@@ -59,7 +59,50 @@
 
 //-------------------------------
 
+
+
+// function colorOpinions (){
+//     var colorPrompt = prompt("What is your favorite color?");
+//         if(colorPrompt === "blue"){
+//             return("Blue is the BEST.. but don't tell the other colors....");
+//         }else if(colorPrompt === "red"){
+//             return("Red? Yikes..");
+//         } else if(colorPrompt === "cyan"){
+//             return("Hmmm, Cyan, someone with taste I see.");
+//         }
+//          else{
+//             return("The color you entered is undefined, but i'm sure it's nice!");
+//          }
+// }
+// console.log(colorOpinions());
+
+// var temperature = prompt("What is the temperature outside?");
+//
+// //var weather = 75; ***Could also use this approach***
+//
+// if ( temperature > 70 ) {
+//     console.log("Bring Sunnies!");
+// } else if (temperature > 50 && temperature <= 70) {
+//     console.log("Bring Sweater");
+// }
+//   else {
+//       console.log("Don\'t go outside!");
+// }
+
+// var pass = "theSecretPassword";
+// var userGuess = prompt("guess the password");
+//
+// if (userGuess === pass) {
+//     alert("You got it!");
+// }
+//   else {
+//       alert("Try Again!");
+// }
+
+
+// ----------------------------
 // var message;
+// var success = confirm("does this work?");
 //
 // if (success) {
 //     message = "Operation was successful.";
@@ -68,18 +111,28 @@
 // }
 //
 // var message = (success) ? "Operation was successful." : "Oops, something went wrong.";
+//
+// console.log(message)
 
-function colorOpinions (){
-    var colorPrompt = prompt("What is your favorite color?");
-        if(colorPrompt === "blue"){
-            return("Blue is the BEST.. but don't tell the other colors....");
-        }else if(colorPrompt === "red"){
-            return("Red? Yikes..");
-        } else if(colorPrompt === "cyan"){
-            return("Hmmm, Cyan, someone with taste I see.");
-        }
-         else{
-            return("The color you entered is undefined, but i'm sure it's nice!");
-         }
+// ----------------------- Don't really use this anymore but it replaces as above
+
+// var success = confirm("does this work?");
+//
+// var message = (success) ? "Operation was successful." : "Oops, something went wrong.";
+//
+// console.log(message)
+
+// write a function that acepts the weather and returns bring sunnies if its sunny and returns bring sweater if its chilly
+
+var weather = 'chilly'
+function checkWeather(weather) {
+    if (weather == 'sunny') {
+        return 'bring sunnies';
+    } else if (weather == 'chilly') {
+        return 'test';
+    }
+      else {
+        return 'whatever you want';
+    }
 }
-console.log(colorOpinions());
+console.log(checkWeather(weather))
