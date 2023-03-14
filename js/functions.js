@@ -46,7 +46,6 @@ console.log(sayHello(myNameIs));
 // and stores it in a variable named random
 
 var random = Math.floor((Math.random() * 3) + 1);
-console.log(random);
 
 /**
  * TODO:
@@ -67,6 +66,7 @@ console.log(random);
  */
 
 function isTwo(x) {
+    console.log(x);
     return x === 2;
 }
 
