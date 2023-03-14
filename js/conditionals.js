@@ -168,6 +168,7 @@ alert(analyzeColors());*/
  * return value.
  */
 
+/*
 function calculateTotal(luckyNumber, totalAmount){
     switch(luckyNumber) {
         case 0:
@@ -193,6 +194,7 @@ function calculateTotal(luckyNumber, totalAmount){
             break;
     }
 }
+*/
 
 //  * TODO:
 //  * Uncomment the line below to generate a random number between 0 and 5.
@@ -203,6 +205,7 @@ function calculateTotal(luckyNumber, totalAmount){
 //  *!/
 // Generate a random number between 0 and 6
 
+/*
 var luckyNumber = Math.floor(Math.random() * 6);
 console.log(luckyNumber + " is the lucky number");
 var totalAmount = Number(prompt("What was your bill amount?"));
@@ -210,6 +213,7 @@ var totalAmount = Number(prompt("What was your bill amount?"));
 var result = calculateTotal(luckyNumber, totalAmount)
 alert(result + " is your total cost after discount!");
 console.log(result + " is your total cost after discount!");
+*/
 
 
 /**
@@ -230,3 +234,35 @@ console.log(result + " is your total cost after discount!");
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var isEven = function(num) {
+    if(num % 2 === 0) {
+        alert('The number ' +num+ ' is even!')
+    } else {
+        alert('The number ' +num+ ' is odd!')
+    }
+}
+//Adds 100 to number and alerts user
+var plusHundred = function(num) {
+    var added = num + 100
+    alert('Adding 100 to ' +num+ ' is ' +added)
+}
+//Checks if number is positive or negative and alerts user
+var isPositive = function(num) {
+    if (num > 0) {
+        alert('The number ' +num+ ' is positive')
+    } else {
+        alert('The number ' +num+ ' is negative')
+    }
+}
+
+var confirmNumber = confirm("Would you like to enter a number?")
+    if (confirmNumber) {
+        var inputNumber = +prompt ("Enter your number" )
+        console.log(inputNumber);
+        isEven(inputNumber)
+        plusHundred(inputNumber)
+        isPositive(inputNumber)
+    } else {
+        alert ("Refresh page to enter number")
+    }
