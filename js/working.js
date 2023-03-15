@@ -124,15 +124,50 @@
 
 // write a function that acepts the weather and returns bring sunnies if its sunny and returns bring sweater if its chilly
 
-var weather = 'chilly'
-function checkWeather(weather) {
-    if (weather == 'sunny') {
-        return 'bring sunnies';
-    } else if (weather == 'chilly') {
-        return 'test';
-    }
-      else {
-        return 'whatever you want';
-    }
+// var weather = 'chilly'
+// function checkWeather(weather) {
+//     if (weather == 'sunny') {
+//         return 'bring sunnies';
+//     } else if (weather == 'chilly') {
+//         return 'test';
+//     }
+//       else {
+//         return 'whatever you want';
+//     }
+// }
+// console.log(checkWeather(weather))
+
+
+// function addOne(input) {
+//     var num = Number(input)
+//     return num + 1
+// }
+//
+// console.log(addOne("-99"))
+
+
+function logger () {
+    console.log("Go Time");
+    console.log("Go Time");
+    console.log("Go Time");
 }
-console.log(checkWeather(weather))
+
+logger(); // function invocation
+
+const name = "Dev Ed";
+
+function addMe(num1, num2) {
+    console.log(num1 + num2);
+}
+
+addMe(3,5);
+
+// The function does not do anything but store information. the invocation is what runs the equation
+
+function toUpper(text) {
+    const name = "upperCase";
+    text.toUpperCase();
+    console.log(upperCase);
+}
+
+toUpper()
