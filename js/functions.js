@@ -64,7 +64,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-
+var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(x) {
     console.log(x);
     return x === 2;
@@ -73,6 +73,9 @@ function isTwo(x) {
 console.log(isTwo(random));
 
 //-------------------------------
+
+
+
 
 /**
  * TODO:
