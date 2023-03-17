@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 //
 
 // //Write a function that accepts and multiplies 3 numbers and alerts the browser with the result
@@ -174,79 +174,106 @@
 
 //WHILE LOOPS -- Executes Block as long as condition is true. -- Condition stated at beginning of function
 //CONDITION WOULD HAVE TO RESULT IN BOOLEAN EXPRESSION
+//
+// var i = 0;
+//
+// while (i < 10) {
+//     console.log('while loop iteration #' + i);
+//     i++;
+// }
+//
+// var i = 1;
+// while (i < 65536) {
+//     i = i * 2
+//     console.log(i);
+//     i++;
+// }
+//
+// var i = 10;
+//
+// while (i < 10) {
+//     console.log('while loop iteration #' + i);
+//     i++;
+// }
+//
+// //DO WHILE LOOPS = Same as a while loop with exception that the condition is evaluated at the end of the look.
+//
+// var i = 10;
+//
+// do {
+//     console.log('while loop iteration #' + i);
+//     i++;
+// } while (i < 10);
+//
+//
+//
+//
+// //FOR LOOPS ---> RUNS FIRST LOOP ITERATION TO INITIALIZE --->CHECK CONDITIONS ---> INCREMENTS (PERFORMS  ACTION)
+// for (var i = 0; i < 10; i++) {
+//     console.log('for loop iteration #' + i);
+// }
+// for (var i = 0, j = 9; i < 10; i++, j--) {  //TWO DIFFERENT VARIABLES WITH INCREMENT AND DECREMENT HAPPERNING
+//     console.log('for loop iteration #' + i + ', j = ' + j);
+// }
+//
+// //we will use for loops when we know ahead of time how many times the loop needs to run, and while or do-while loops when we cannot know how many times the loop needs to run.
+//
+//
+// //BREAK AND CONTINUE
+// //BREAK allows you to exit loop at any time
+// var numberToStopAt = 5;
+//
+// for (var i = 1; i < 100; i++) {
+//
+//     console.log('Loop counter is: ' + i);
+//
+//     if (i === numberToStopAt) {
+//         console.log('We have reached the stopping point: break!');
+//         // use the break keyword to exit from the while loop
+//         break;
+//         // nothing after the break will get processed
+//         console.log('You will never see this line.');
+//     }
+// }
+//
+//
+// //CONTINUE - sometimes conditions occur that give reason to skip to the next loop iteration without completing the entire loop code block
+//
+// for (var i = 1; i < 100; i++) {
+//
+//     if (i % 2 !== 0) {
+//         // number isn't even
+//         // odd numbers aren't as cool
+//         // skip the rest of the loop and continue with the next iteration
+//         continue;
+//     }
+//
+//     console.log('Here is a lovely even number: ' + i);
+// }
 
-var i = 0;
 
-while (i < 10) {
-    console.log('while loop iteration #' + i);
-    i++;
+//ARRAYS
+
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+// console.log(shapes.length); // 4
+// console.log(shapes[3]); // logs item at 3 spot in array
+// for (var i = 0; i <shapes.length; i++) {
+//     console.log(shapes[i]); // list entire array
+// }
+
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+// loop through the array and log the values
+shapes.forEach(function(shape) {
+    console.log('Here is a lovely shape: ' + shape + '.');
+});
+
+var numbers = [1, 2, 3, 4, 5];
+var bucket = 0;
+
+numbers.forEach(function(number) {
+    bucket = bucket + number;
 }
 
-var i = 1;
-while (i < 65536) {
-    i = i * 2
-    console.log(i);
-    i++;
-}
-
-var i = 10;
-
-while (i < 10) {
-    console.log('while loop iteration #' + i);
-    i++;
-}
-
-//DO WHILE LOOPS = Same as a while loop with exception that the condition is evaluated at the end of the look.
-
-var i = 10;
-
-do {
-    console.log('while loop iteration #' + i);
-    i++;
-} while (i < 10);
-
-
-
-
-//FOR LOOPS ---> RUNS FIRST LOOP ITERATION TO INITIALIZE --->CHECK CONDITIONS ---> INCREMENTS (PERFORMS  ACTION)
-for (var i = 0; i < 10; i++) {
-    console.log('for loop iteration #' + i);
-}
-for (var i = 0, j = 9; i < 10; i++, j--) {  //TWO DIFFERENT VARIABLES WITH INCREMENT AND DECREMENT HAPPERNING
-    console.log('for loop iteration #' + i + ', j = ' + j);
-}
-
-//we will use for loops when we know ahead of time how many times the loop needs to run, and while or do-while loops when we cannot know how many times the loop needs to run.
-
-
-//BREAK AND CONTINUE
-//BREAK allows you to exit loop at any time
-var numberToStopAt = 5;
-
-for (var i = 1; i < 100; i++) {
-
-    console.log('Loop counter is: ' + i);
-
-    if (i === numberToStopAt) {
-        console.log('We have reached the stopping point: break!');
-        // use the break keyword to exit from the while loop
-        break;
-        // nothing after the break will get processed
-        console.log('You will never see this line.');
-    }
-}
-
-
-//CONTINUE - sometimes conditions occur that give reason to skip to the next loop iteration without completing the entire loop code block
-
-for (var i = 1; i < 100; i++) {
-
-    if (i % 2 !== 0) {
-        // number isn't even
-        // odd numbers aren't as cool
-        // skip the rest of the loop and continue with the next iteration
-        continue;
-    }
-
-    console.log('Here is a lovely even number: ' + i);
-}
+console.log(bucket)
