@@ -8,6 +8,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
+
     var names = ["Joe", "Billy", "Bob", "Mary"];
     console.log(names);
 
@@ -79,4 +80,4 @@
     console.log(last(example)); // y
 })();
 
-function array() {}
+
