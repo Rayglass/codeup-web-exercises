@@ -1,6 +1,6 @@
 "use strict";
 
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -8,7 +8,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ['Joe', 'Billy', 'Bob', 'Mary'];
+    var names = ["Joe", "Billy", "Bob", "Mary"];
     console.log(names);
 
     /**
@@ -17,36 +17,34 @@
      * array.
      */
 
-    console.log('There are ' + names.length + ' people in the array');
+    console.log("There are " + names.length + " people in the array");
 
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    console.log('The first person is: ' + names[0]);
-    console.log('The second person is: ' + names[1]);
-    console.log('The third person is: ' + names[2]);
-    console.log('The fourth person is: ' + names[3]);
-
+    console.log("The second person is: " + names[0]);
+    console.log("The second person is: " + names[1]);
+    console.log("The third person is: " + names[2]);
+    console.log("The fourth person is: " + names[3]);
 
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-for (var i = 0; i < names.length; i++) {
-        console.log('The name at index ' + i + ' is ' + names[i]);
+    for (var i = 0; i < names.length; i++) {
+        console.log("The name at index " + i + " is " + names[i]);
     }
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-    names.forEach(function(name) {
-        console.log('one of the names in our group is ' + name + '.');
+    names.forEach(function (name) {
+        console.log("one of the names in our group is " + name + ".");
     });
-
 
     /**
      * TODO:
@@ -62,13 +60,12 @@ for (var i = 0; i < names.length; i++) {
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-
     var example = [1, 2, 3, 4, 5];
 
     function first(x) {
         return x[0];
     }
-    console.log(first(example));//1
+    console.log(first(example)); //1
 
     function second(x) {
         return x[1];
@@ -77,11 +74,9 @@ for (var i = 0; i < names.length; i++) {
 
     function last(x) {
         x.length;
-        return x[x.length -1];
+        return x[x.length - 1];
     }
     console.log(last(example)); // y
 })();
 
-function array() {
-
-}
+function array() {}
