@@ -407,3 +407,11 @@ var shapes = ['square', 'rectangle', 'circle', 'triangle'];
 // // Joe,Bob,Sally
 
 
+var waterBottle = {
+    color: 'Red',
+    Size: '64oz',
+    Material: 'Metal',
+    Logo: 'KC Chiefs',
+}
+
+console.log(waterBottle);
