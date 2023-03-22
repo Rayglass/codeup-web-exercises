@@ -29,7 +29,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function sayHello() {
+    person.sayHello = function() {
         return "Hello from " + person.firstName + " " + person.lastName + "!";
     };
     console.log(person.sayHello());
@@ -47,12 +47,6 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
-        // var shoppers = [
-        //     {name: 'Cameron', amount: 180},
-        //     {name: 'Ryan', amount: 250},
-        //     {name: 'George', amount: 320}
-        // ];
 
     var shoppers = [
             { name: "Cameron", amount: 180 },
@@ -95,35 +89,28 @@
 
     var books = [
         {
-            author: { firstName: "John", lastName: "Maxwell" },
-
+            author: { firstName: "John",
+                lastName: "Maxwell" },
             title: "Everyone Communicates, Few Connect",
         },
-
         {
-            author: { firstName: "Jocko", lastName: "Willink" },
-
+            author: { firstName: "Jocko",
+                lastName: "Willink" },
             title: "Extreme Ownership",
         },
-
         {
-            author: {
-                firstName: "Simon",
-                lastName: "Sinek",
-            },
-
+            author: { firstName: "Simon",
+                lastName: "Sinek" },
             title: "Start with Why",
         },
-
         {
-            author: { firstName: "Doug", lastName: "Lemov" },
-
+            author: { firstName: "Doug",
+                lastName: "Lemov" },
             title: "Teach Like a Champion 3.0",
         },
-
         {
-            author: { firstName: "Patrick", lastName: "Lencioni" },
-
+            author: { firstName: "Patrick",
+                lastName: "Lencioni" },
             title: "The Ideal Team Player",
         },
     ];
