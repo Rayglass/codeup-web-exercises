@@ -1,0 +1,21 @@
+/*CSS Style Sheet*/
+
+
+/*.fancy-header {*/
+/*    color: purple;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+.div1 .fancy-header {
+    color: gray;
+    text-align: center;
+    color: dimgrey;
+    text-decoration: underline;
+}
+
+/*.fancy-header {*/
+/*    color: gray;*/
+/*    text-align: center;*/
+/*    color: dimgrey;*/
+/*    text-decoration: underline;*/
+/*}*/
