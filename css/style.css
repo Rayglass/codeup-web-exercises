@@ -1,21 +1,62 @@
 /*CSS Style Sheet*/
 
-
-/*.fancy-header {*/
-/*    color: purple;*/
-/*    text-decoration: underline;*/
-/*}*/
-
 .div1 .fancy-header {
-    color: gray;
     text-align: center;
-    color: dimgrey;
+    color: white;
     text-decoration: underline;
 }
 
-/*.fancy-header {*/
-/*    color: gray;*/
-/*    text-align: center;*/
-/*    color: dimgrey;*/
-/*    text-decoration: underline;*/
-/*}*/
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("https://mcdn.wallpapersafari.com/medium/47/9/EMpcBC.png");
+    background-size: cover;
+    font-family: Helvetica, sans-serif;
+    background-color: teal;
+}
+
+ol {
+    /*list-style-type: decimal;*/
+    list-style-type: square;
+    list-style-position: inside;
+
+}
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    /*margin: 0 auto;*/
+}
+
+a:hover {
+    color:red;
+    color:pink;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color: blue;
+    color:lightblue;
+}
+table {
+    /*box-sizing: border-box;*/
+    /*width: 25%;*/
+    padding: 2px;
+    margin: 0;
+    background-color: lightgrey;
+    border: 3px solid black;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    /*padding: 1%;*/
+}
