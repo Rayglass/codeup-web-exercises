@@ -1,0 +1,150 @@
+:root {
+    --main-bg: #e6ecf0;
+    --link-color: #3b94d9;
+    --main-link-color: #848487;
+    --light-bg: #fff;
+    --separator-color: #ddd;
+}
+* {
+    box-sizing: border-box;
+}
+body,
+html {
+    background-color: var(--main-bg);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+/*Image at top of page*/
+header {
+    background-image: url("https://picsum.photos/1200/300");
+    background-size: cover;
+    min-height: 300px;
+    padding-top: 275px;
+}
+a {
+    color: var(--link-color);
+}
+/*Navigation Panel at top of page*/
+.top-nav {
+    background: var(--light-bg);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 1.5em;
+}
+.nav-link {
+    color: var(--main-link-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: var(--link-color);
+}
+
+/*Profile Photo*/
+.profile {
+    background: var(--light-bg);
+    height: 80px;
+}
+.profile-image {
+    position: absolute;
+    line-height: 80px;
+    top: 235px;
+}
+/*Profile Edit Button*/
+.profile-form {
+    line-height: 60px;
+}
+
+.btn {
+    border: 1px solid var(--main-link-color);
+    color: var(--main-link-color);
+    background: var(--light-bg);
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+}
+.btn-large {
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+.img-circle {
+    border-radius: 100%;
+    border: 4px solid var(--light-bg);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-muted {
+    color: var(--main-link-color);
+}
+
+/*MIDDLE CONTAINER*/
+
+/*Profile Details*/
+.profile-details {
+    width: calc(25% - 1em);
+    margin: 0.5em;
+    float: left;
+}
+
+/*Timeline*/
+.timeline {
+    width: calc(50% - 1em);
+    margin: 0.5em;
+    float: left;
+}
+/*Who to Follow*/
+.who-to-follow {
+    width: calc(25% - 1em);
+    margin: 0.5em;
+    float: right;
+}
+
+.container {
+    margin: 2em;
+}
+
+/*Media Organization*/
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: 0.5em;
+    overflow: auto;
+}
+
+.media-image {
+    float: left;
+    max-width: 50px;
+    margin-top: 1.33em;
+}
+
+.media-body {
+    width: calc(100%- 50px);
+    float: left;
+}
+.profile-items {
+    padding: 0;
+    list-style-type: none;
+}
+.profile-entry {
+    margin: 0.5em;
+}
