@@ -68,6 +68,7 @@ a {
 /*Profile Edit Button*/
 .profile-form {
     line-height: 60px;
+    margin-right: 1em;
 }
 
 .btn {
