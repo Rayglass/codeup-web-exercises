@@ -31,7 +31,7 @@ nav a:hover {
     padding: .2em;
     left: 50%;
     /*so that it is in the center of the nav bar*/
-    margin-left: -56px;
+    margin-left: -75px;
     position: absolute;
     /*text-align: center;*/
 
