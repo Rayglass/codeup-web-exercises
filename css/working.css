@@ -1,0 +1,164 @@
+@media screen and (max-width: 699px){
+
+    *{
+        box-sizing: border-box;
+    }
+
+    .alert-info {
+        display: inline-block;
+        padding: 1em;
+        width: 100%;
+        background-color: lightblue;
+        text-decoration: none;
+        text-align: center;
+        border-style: solid;
+        border-color: lightgray;
+        color: black;
+    }
+
+    main {
+        font-family: sans-serif;
+        margin: 2em;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+
+    li {
+        list-style-type: none;
+        margin: .5em 0;
+    }
+
+    li a {
+        display: inline-block;
+        background: lightgray;
+        padding: 1em;
+        width: 100%;
+        text-align: center;
+        color: blue;
+        text-decoration: underline;
+
+    }
+
+
+
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        border-style: solid;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    section{
+        justify-content: space-evenly;
+        padding-top: 20px;
+        /*flex-wrap: wrap;*/
+
+    }
+
+
+    #main.main{
+        position: relative;
+        bottom: 1.5em;
+        top: 4px;
+
+
+    }
+
+    .sub-section{
+        position:relative;
+        top: 20px;
+        font-style:italic;
+
+    }
+    footer{
+        position: relative;
+        top: 100px;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    *{
+        box-sizing: border-box;
+    }
+    main {
+        font-family: sans-serif;
+        margin: 2em;
+    }
+
+    .hidden-on-desktop {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        bottom: 40px;
+        gap: 10px 20px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        border-style: solid;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section {
+        flex-direction: column;
+        display: flex;
+        padding: 20px;
+    }
+
+    #main.main {
+        width: 60%;
+        float: left;
+        padding: 30px;
+        border: 2px;
+    }
+
+    .sub-section {
+        width: 40%;
+        padding: 30px;
+        border: 2px;
+        right: 40px;
+    }
+    footer{
+        display:flex;
+        flex-direction: row;
+    }
+    footer p{
+        display: flex;
+        bottom: 1px;
+        margin-right: auto;
+    }
+
+    .fa-brands{
+        flex-direction: row;
+        margin: auto;
+        font-size: 40px;
+
+    }
+
+}
