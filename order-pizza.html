@@ -57,7 +57,7 @@
 
   <!--Start jumbotron-->
   <!--  NEED TO GET THE IMAGE TO DISAPPEAR ON SMALL SCREENS d-sm-none d-md-block -->
-  <div class="jumbotron mt-4 mb-5 p-5 d-flex align-items-center">
+  <div class="jumbotron mt-4 mb-5 p-5 d-flex d-none d-md-block align-items-center">
     <div class="opacity-75 bg-light flex-fill text-center display-4">Welcome to Pizza World!</div>
   </div>
   <!--End jumbotron-->
@@ -67,7 +67,7 @@
   <!-- Tabs -->
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="size-tab" data-bs-toggle="tab" data-bs-target="#size" type="button" role="tab" aria-controls="size" aria-selected="true"><span class="badge bg-secondary rounded-pill">1</span>Size and Crust</button>
+      <button class="nav-link active" id="size_tab" data-bs-toggle="tab" data-bs-target="#size" type="button" role="tab" aria-controls="size" aria-selected="true"><span class="badge bg-secondary rounded-pill">1</span>Size and Crust</button>
     </li>
     <li class="nav-item" role="presentation">
       <button class="nav-link" id="cheese-tab" data-bs-toggle="tab" data-bs-target="#cheese" type="button" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge bg-secondary rounded-pill">2</span>Cheese and Sauce</button>
@@ -81,7 +81,7 @@
   <div class="tab-content" id="myTabContent">
 
     <!--Size and Crust-->
-    <div class="tab-pane fade show active border" id="size" role="tabpanel" aria-labelledby="size-tab">
+    <div class="tab-pane fade show active border" id="size" role="tabpanel" aria-labelledby="size_tab">
       <div class="card">
         <div class="card-header bg-primary text-white">
           Choose Size and Crust
@@ -127,6 +127,9 @@
         <!--Size and Crust Footer-->
         <div class="card-footer p-2 d-flex justify-content-end">
           <button class="btn btn-primary">Next Step ></button>
+
+
+
         </div>
       </div>
     </div>
@@ -135,7 +138,7 @@
     <div class="tab-pane fade border" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
       <div class="card">
         <div class="card-header bg-primary text-white">
-          Choose Size and Crust
+          Choose Cheese and Sauce
         </div>
 
         <!--Cheese-->
@@ -186,8 +189,8 @@
         <!--Cheese and Sauce Footer-->
         <div class="card-footer p-2 d-flex justify-content-end">
           <div class="btn-group">
-            <button class="btn btn-primary">< Previous</button>
-            <button class="btn btn-primary">Next Step ></button>
+            <button class="btn btn-primary m-1">Previous</button>
+            <button class="btn btn-primary m-1">Next Step ></button>
           </div>
         </div>
       </div>
@@ -253,7 +256,7 @@
         </div>
         <!--Toppings Footer-->
         <div class="card-footer p-2 d-flex justify-content-end">
-          <button class="btn btn-primary">Checkout</button>
+          <button type="submit" class="btn btn-primary">Checkout<i class="fa-sharp fa-solid fa-cart-shopping ps-1"></i></button>
         </div>
       </div>
     </div>
