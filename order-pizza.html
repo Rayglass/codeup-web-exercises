@@ -14,22 +14,7 @@
   <script src="https://kit.fontawesome.com/0bb8b86cc6.js" crossorigin="anonymous"></script>
 
 <!--  Custom CSS Styles -->
-<!--  <link rel="stylesheet" href="css/custom.css">-->
-
-<!--  <style>-->
-<!--    #search-btn {-->
-<!--      background-color: white;-->
-<!--    }-->
-
-<!--    #main-jumbotron {-->
-<!--      background-image: url("img/pizza.png");-->
-<!--    }-->
-
-<!--    #jumbotron-container {-->
-<!--      padding: 0;-->
-<!--      background-color: #ffffffa6;-->
-<!--    }-->
-<!--  </style>-->
+  <link rel="stylesheet" href="css/custom.css">
 
   <title>Pizza World</title>
 
@@ -65,27 +50,126 @@
         </ul>
 
         <a href="#" class="link-dark text-decoration-none text-muted"><i class="fa-solid fa-user me-2" style="color: #000000;"></i>Sign Up!</a>
+
       </div>
     </div>
   </nav>
 </div>
 
-
 <!-- End Navigation Bar-->
-
 
 <!-- Start Container -->
 <div class="container">
 
   <!--Start jumbotron-->
-
-<!--  <div class="jumbotron jumbotron-fluid d-none d-md-block" id="main-jumbotron">-->
-<!--    <div class="container-fluid text-center" id="jumbotron-container">-->
-<!--      <h1 class="display-4" id="jumbotron-header">Welcome to Pizza World!</h1>-->
-<!--    </div>-->
-<!--  </div>-->
-
+<!--  NEED TO GET THE IMAGE TO DISAPPEAR ON SMALL SCREENS d-sm-none d-md-block -->
+  <div class="jumbotron mt-4 mb-5 p-5 d-flex align-items-center">
+    <div class="opacity-75 bg-light flex-fill text-center display-4">Welcome to Pizza World!</div>
+  </div>
   <!--end jumbotron-->
+
+<h2>Build your own pizza!</h2>
+
+<!-- Tabs -->
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="tab-1" data-toggle="tab" href="#size-crust" role="tab"
+         aria-controls="size-crust"
+         aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>
+        Size and Crust</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tab-2" data-toggle="tab" href="#cheese-sauce" role="tab"
+         aria-controls="cheese-sauce"
+         aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>
+        Cheese and Sauce</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tab-3" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings"
+         aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>
+        Toppings</a>
+    </li>
+  </ul>
+
+<!--  Size and Crust  -->
+
+  <div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="size-crust" role="tabpanel" aria-labelledby="tab-1">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          Choose Size and Crust
+        </div>
+        <div class="card-body">
+          <div class="card mb-3">
+            <p class="card-header">Hand Tossed</p>
+            <div class="card-body  p-0">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="crust-type" id="hand-small"
+                           value="hand-small">
+                    <label class="form-check-label" for="hand-small">
+                      Small (10")
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="crust-type" id="hand-medium"
+                           value="hand-medium">
+                    <label class="form-check-label" for="hand-medium">
+                      Medium (12")
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <p class="card-header">Crispy Thin</p>
+            <div class="card-body p-0">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="crust-type" id="crispy-med"
+                           value="crispy-med">
+                    <label class="form-check-label" for="hand-small">
+                      Medium (12")
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="crust-type" id="crispy-lg"
+                           value="crispy-lg">
+                    <label class="form-check-label" for="crispy-lg">
+                      Large (14")
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="card-footer text-right">
+          <a href="#tab-2" class="btn btn-primary">Next Step <i class="fa fa-angle-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+
 
 
 
