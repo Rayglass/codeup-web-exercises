@@ -76,35 +76,36 @@
     <li class="nav-item">
       <a class="nav-link active" id="tab-1" data-toggle="tab" href="#size-crust" role="tab"
          aria-controls="size-crust"
-         aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>
+         aria-selected="true"><span class="badge rounded-pill badge-secondary bg-secondary">1</span>
         Size and Crust</a>
+
     </li>
     <li class="nav-item">
       <a class="nav-link" id="tab-2" data-toggle="tab" href="#cheese-sauce" role="tab"
          aria-controls="cheese-sauce"
-         aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>
+         aria-selected="false"><span class="badge rounded-pill badge-secondary bg-secondary">2</span>
         Cheese and Sauce</a>
     </li>
+
     <li class="nav-item">
       <a class="nav-link" id="tab-3" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings"
-         aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>
+         aria-selected="false"><span class="badge rounded-pill badge-secondary bg-secondary">3</span>
         Toppings</a>
     </li>
   </ul>
 
-<!--  Size and Crust  -->
-
-  <div class="tab-content" id="myTabContent">
-
+<!--  Size and Crust Card  -->
+  <div class ="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="size-crust" role="tabpanel" aria-labelledby="tab-1">
-      <div class="card">
+      <div class ="card">
         <div class="card-header bg-primary text-white">
           Choose Size and Crust
         </div>
+
         <div class="card-body">
-          <div class="card mb-3">
+          <div class="card Hand Tossed">
             <p class="card-header">Hand Tossed</p>
-            <div class="card-body  p-0">
+<!--            <div class="card-body  p-0">-->
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
 
@@ -117,63 +118,81 @@
                     </label>
                   </div>
                 </li>
-                <li class="list-group-item">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="crust-type" id="hand-medium"
-                           value="hand-medium">
-                    <label class="form-check-label" for="hand-medium">
-                      Medium (12")
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <p class="card-header">Crispy Thin</p>
-            <div class="card-body p-0">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
 
                 <li class="list-group-item">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="crust-type" id="crispy-med"
-                           value="crispy-med">
+                    <input class="form-check-input" type="radio" name="crust-type" id="hand-small"
+                           value="hand-small">
                     <label class="form-check-label" for="hand-small">
                       Medium (12")
                     </label>
                   </div>
                 </li>
-                <li class="list-group-item">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="crust-type" id="crispy-lg"
-                           value="crispy-lg">
-                    <label class="form-check-label" for="crispy-lg">
-                      Large (14")
-                    </label>
-                  </div>
-                </li>
               </ul>
-            </div>
           </div>
 
+          <div class="card mb-3">
+            <p class="card-header">Crispy Thin</p>
+            <!--            <div class="card-body  p-0">-->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
 
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="crust-type" id="hand-small"
+                         value="hand-small">
+                  <label class="form-check-label" for="hand-small">
+                    Medium (12")
+                  </label>
+                </div>
+              </li>
+
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="crust-type" id="hand-small"
+                         value="hand-small">
+                  <label class="form-check-label" for="hand-small">
+                    Large (14")
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card-footer text-right">
-          <a href="#tab-2" class="btn btn-primary">Next Step <i class="fa fa-angle-right"></i></a>
-        </div>
       </div>
 
+      <div class="card-footer text-right">
+        <a href="#tab-2" class="btn btn-primary">Next Step <i class="fa fa-angle-right"></i></a>
+      </div>
     </div>
 
+  </div>
+
+<!--  Cheese and Sauce Card  -->
+  <div class="tab-pane fade" id="cheese-sauce" role="tabpanel" aria-labelledby="tab-2">
+
+    <div class="card">
+
+      <div class="card-header bg-primary text-white">
+        Choose Cheese and Sauce
+      </div>
 
 
 
 
-</div>
+  </div>
+
+
+
+
+
+
+<!--  Toppings Card  -->
+
+
+
+
 
 <!-- End Container -->
 
