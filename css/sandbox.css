@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F0F0F0;
+}
+:root {
+    --main-bg-color: #f0f0f0;
+    --main-lightgrey-color: lightgrey;
+    --main-red-color: #E6563B;
+    --main-gold-color: #DEA03D;
+    --main-green-color: #76B06C;
+    --main-aqua-color: #00ABA9;
+}
+#banner {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    margin-top: 25px;
+    position: absolute;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 64px;
+}
+h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 48px;
+}
+h3 {
+    font-size: 40px;
+}
+h4 {
+    font-family: "Anton", sans-serif;
+    font-size: 32px;
+}
+h5 {
+    font-family: "Anton", sans-serif;
+    font-size: 22px;
+}
+.abel {
+    font-family: "Abel", sans-serif;
+}
+.anton {
+    font-family: "Anton", sans-serif;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.nav-link {
+    font-family: "Abel", sans-serif;
+    color: black;
+}
+p {
+    font-size: small;
+}
+.logo {
+    width: 105px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+}
+.logo-2 {
+    width: 40px;
+    height: 40px
+}
+.red {
+    background-color: var(--main-red-color);
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gold {
+    background-color: var(--main-gold-color);
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.green {
+    background-color: var(--main-green-color);
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aqua {
+    background-color: var(--main-aqua-color);
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.text-circles {
+    font-size: 20px;
+}
+.dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 12px;
+}
+.dot-r {
+    background-color: var(--main-red-color);
+}
+.dot-g {
+    background-color: var(--main-gold-color);
+}
+.dot-gr {
+    background-color: var(--main-green-color);
+}
+.dot-a {
+    background-color: var(--main-aqua-color);
+}
+.img-thumbnail {
+    background-color: var(--main-lightgrey-color);
+}
+/*Work on Medium Sizing*/
+.mini {
+    width: 100vh;
+    height: 75px;
+}
+#
