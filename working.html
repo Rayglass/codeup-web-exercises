@@ -57,7 +57,7 @@
 
     <!--Start jumbotron-->
     <!--  NEED TO GET THE IMAGE TO DISAPPEAR ON SMALL SCREENS d-sm-none d-md-block -->
-    <div class="jumbotron mt-4 mb-5 p-5 d-flex d-none d-md-block align-items-center">
+    <div class="jumbotron d-md-flex d-none d-md-block align-items-md-center">
         <div class="opacity-75 bg-light flex-fill text-center display-4">Welcome to Pizza World!</div>
     </div>
     <!--End jumbotron-->
@@ -67,13 +67,13 @@
     <!-- Tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="size_tab" data-bs-toggle="tab" data-bs-target="#size" type="button" role="tab" aria-controls="size" aria-selected="true"><span class="badge bg-secondary rounded-pill">1</span>Size and Crust</button>
+            <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#crust" type="button" role="tab" aria-controls="crust" aria-selected="true"><span class="badge bg-secondary rounded-pill">1</span>Size and Crust</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="cheese-tab" data-bs-toggle="tab" data-bs-target="#cheese" type="button" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge bg-secondary rounded-pill">2</span>Cheese and Sauce</button>
+            <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#cheese" type="button" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge bg-secondary rounded-pill">2</span>Cheese and Sauce</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="toppings-tab" data-bs-toggle="tab" data-bs-target="#toppings" type="button" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge bg-secondary rounded-pill">3</span>Toppings</button>
+            <button class="nav-link" id="tab-3" data-bs-toggle="tab" data-bs-target="#toppings" type="button" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge bg-secondary rounded-pill">3</span>Toppings</button>
         </li>
     </ul>
 
@@ -81,7 +81,7 @@
     <div class="tab-content" id="myTabContent">
 
         <!--Size and Crust-->
-        <div class="tab-pane fade show active border" id="size" role="tabpanel" aria-labelledby="size_tab">
+        <div class="tab-pane fade show active border" id="crust" role="tabpanel" aria-labelledby="size_tab">
             <div class="card">
                 <div class="card-header bg-primary text-white">
                     Choose Size and Crust
@@ -127,9 +127,6 @@
                 <!--Size and Crust Footer-->
                 <div class="card-footer p-2 d-flex justify-content-end">
                     <button class="btn btn-primary">Next Step ></button>
-
-
-
                 </div>
             </div>
         </div>
