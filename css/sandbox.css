@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+span {
+    font-size: 10px;
+}
+
+/*.circle {*/
+/*    height: 20px;*/
+/*    width: 20px;*/
+/*    border-radius: 50%;*/
+/*    display: inline-block;*/
+/*    text-align: center;*/
+/*}*/
+
+.btn-circle.btn-xl {
+    width: 100px;
+    height: 100px;
+    padding: 10px 16px;
+    border-radius: 100%;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    border: 5px solid white;
+
+}
+
+
+.section-bottom {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.featured-text {
+    font-size: 13px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.circle {
+    background: gold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex; /* or inline-flex */
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-1 {
+    background-color: #e5563a;
+}
+
+.btn-2 {
+    background-color: #eb9c39;
+}
+
+.btn-3 {
+    background-color: #7aae6b;
+}
+
+.btn-4 {
+    background-color: #00aaa9;
+}
+
+
+.d1-circle {
+    background: #e5563a;
+
+}
+
+.d2-circle {
+    background: #eb9c39;
+
+}
+
+.s-circle {
+    background: #7aae6b;
+
+
+}
+
+.h-circle {
+    background: #00aaa9;
+
+
+}
+
+.icon1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;;
+    border: 6px white solid;
+    font-family: Anton;
+    background-color: #e5563a;
+}
+
+
+
+.icon2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;;
+    border: 6px white solid;
+    font-family: Anton;
+    background-color: #eb9c39;
+}
+.icon3 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border: 6px white solid;
+    font-family: Anton;
+    background-color: #7aae6b;
+}
+.icon4 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border: 6px white solid;
+    font-family: Anton;
+    background-color: #00aaa9;
+}
+
+
