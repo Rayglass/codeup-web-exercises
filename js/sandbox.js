@@ -21,3 +21,10 @@ function myTimer() {
     const d = new Date();
     document.getElementById("demo").innerHTML = d.toLocaleTimeString();
 }
+
+function click() {
+    var btnToClick = document.getElementById('btnToClick');
+
+    console.log(btnToClick); // prints <button id="btnToClick">Click Me</button>
+}
+click()
