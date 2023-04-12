@@ -1,12 +1,27 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body {
     background: #f0f0f0;
 }
+
+.featured {
+    min-width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.bold-heading {
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+
+
+
 
 span {
     font-size: 10px;
@@ -33,21 +48,21 @@ span {
 }
 
 
-.section-bottom {
-    font-family: 'Roboto Condensed', sans-serif;
 
+.section-bottom {
+    font-family: 'Abel', sans-serif;
 }
 
 .featured-text {
-    font-size: 13px;
+    font-size: 18px;
     font-weight: bold;
     align-self: flex-end;
 }
 
 .circle {
     background: gold;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: flex; /* or inline-flex */
     align-items: center;
@@ -94,52 +109,6 @@ span {
 
 }
 
-.icon1 {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;;
-    border: 6px white solid;
-    font-family: Anton;
-    background-color: #e5563a;
-}
 
-
-
-.icon2 {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;;
-    border: 6px white solid;
-    font-family: Anton;
-    background-color: #eb9c39;
-}
-.icon3 {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    border: 6px white solid;
-    font-family: Anton;
-    background-color: #7aae6b;
-}
-.icon4 {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    border: 6px white solid;
-    font-family: Anton;
-    background-color: #00aaa9;
-}
 
 
