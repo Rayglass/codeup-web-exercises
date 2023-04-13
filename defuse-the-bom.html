@@ -22,17 +22,18 @@
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
-        } detonationTimer--;
+        }
+        detonationTimer--;
     }
     var timer = setInterval(updateTimer, 1000);
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
-        clearInterval(timer);
-        alert('BOM has been successfully defused');
-
-    }
+    // function defuseTheBOM() {
+    //     clearInterval(timer);
+    //     alert('BOM has been successfully defused');
+    //
+    // }
 
     // Don't modify anything below this line!
     //
