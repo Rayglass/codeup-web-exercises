@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+  <!--  Required Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+
+  <!--  Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0bb8b86cc6.js" crossorigin="anonymous"></script>
+
+  <!--  Google Fonts-->
+
+  <!--  Custom CSS Styles -->
+  <link rel="stylesheet" href="css/sandbox.css">
+
+  <title>SANDBOX</title>
+
+  <style>
+
+    html {
+      background-color: var(--main - bg);
+      height: 100 %;
+      width: 100 %;
+      margin: 5em;
+      padding: 0;
+      font-family:Arial, Ubuntu, sans - serif;
+    }
+
+    .change {
+      color: lightblue;
+      font-size: 100px;
+      border: 10px solid black;
+    }
+  </style>
+
+
+</head>
+<body>
+<!--Start Container-->
+<!--<h1 class="title">Hello World!</h1>-->
+<!--<button class="changeColor">Click Me</button>-->
+
+<!--<br>-->
+<!--<hr>-->
+
+<!--<h2>Hello Timing</h2>-->
+
+<!--<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>-->
+
+<!--<button onclick="setTimeout(myFunction, 3000);">Try it</button>-->
+
+<!--<br>-->
+<!--<hr>-->
+
+
+<!--<h2>JavaScript Timing</h2>-->
+
+<!--<p>A script on this page starts this clock:</p>-->
+
+<!--<p id="demo"></p>-->
+
+<!--<button onclick="clearInterval(myVar)">Stop time</button>-->
+
+<!--<br>-->
+<!--<hr>-->
+
+<!--<button id="btnToClick">HERE WE GO</button>-->
+
+<br>
+<hr>
+
+
+
+<ul class="nameList">
+  <li>Ray</li>
+  <li>Bob</li>
+  <li>Sophia</li>
+  <li>Gavin</li>
+  <li>Enrique</li>
+
+</ul>
+
+<input class="listInput" type="text" />
+
+<button class="addListBtn">Add List</button>
+
+
+
+
+
+<!--End Container-->
+
+<!--Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Your custom JS goes here -->
+<script src="js/sandbox.js"></script>
+<script>
+  // const text = document.querySelector(".title");
+  // const changeColor = document.querySelector(".changeColor");
+  //
+  // // text.classList.add('change')
+  //
+  // // changeColor.addEventListener('click', function(){
+  // //     text.classList.add('change')
+  // // })
+  // //
+  // //
+  // changeColor.addEventListener('click', function(){
+  //     text.classList.toggle('change');
+  // })
+  //
+  // function myFunction() {
+  //     alert('Hello');
+  // }
+  //
+  // let myVar = setInterval(myTimer ,1000);
+  // function myTimer() {
+  //     const d = new Date();
+  //     document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+  // }
+  //
+  // function click() {
+  //     var btnToClick = document.getElementById('btnToClick');
+  //
+  //     console.log(btnToClick); // prints <button id="btnToClick">Click Me</button>
+  // }
+  // click()
+
+  // Manipulating a list with button clicks
+
+  // const userList = document.querySelectorAll(".nameList li");
+  // const listInput = document.querySelector('.listInput');
+  //
+  // for(user of userList)  {
+  //     user.addEventListener("click", function() {
+  //         console.log(this);
+  //     });
+  // }
+  //
+  // for(user of userList) {
+  //     user.addEventListener("click", function () {
+  //         this.style.color = 'red';
+  //     });
+  // }
+
+  // dont do query selector all because we want to call the li list. not individual element.
+  const userList = document.querySelector(".nameList");
+  const listInput = document.querySelector('.listInput');
+  const addListBtn = document.querySelector(".addListBtn");
+
+  addListBtn.addEventListener('click', function() {
+    // create Li out of thin air
+    const newLi = document.createElement('LI');
+    // want to dynamically add the input value...
+    const liContent = document.createTextNode(listInput.value);
+    // add the input value inside the new Li
+    newLi.appendChild(liContent);
+    //Attaching the Li to the user list
+    userList.appendChild(newLi);
+
+    console.log(userList);
+
+  });
+
+</script>
+
+</body>
+</html>
