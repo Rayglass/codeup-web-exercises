@@ -1,6 +1,5 @@
-(() => {
 
-    "use strict"
+"use strict";
 
     let coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
@@ -109,6 +108,4 @@
     clearButton.addEventListener('click', function (){
         localStorage.clear();
         updateCoffees();
-    })
-
-})();
+    });

@@ -1,35 +1,18 @@
 .page-wrapper {
     font-family:sans-serif;
-    background: url("images/Screenshot 2023-03-15 at 3.08.32 PM.png");
-}
-
-header {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-    background-color: rosybrown;
-    box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    font-family: Cochin, sans-serif;
-}
-
-header  h1 {
-    font-size: 60px;
-    color: black;
-}
-
-header  div.column {
-    height: 80px;
-}
-
-.coffee-pic {
-    width: 150px;
+    /*background: url("images/Screenshot 2023-03-15 at 3.08.32 PM.png");*/
 }
 
 main.container {
     margin-top: 30px;
 }
 
-.row {
-    gap: 30px;
+.jumbotron {
+    background-image: url("/img/coffeeBanner.jpeg");
+    height: 350px;
+    background-size: cover;
 }
+
 
 #coffees {
     display: flex;
@@ -42,13 +25,14 @@ div.coffee-column {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: rgba(188,143,143, .6);
+    background-color: lightgray;
     border: 1px solid grey;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 50%;
     min-width: 500px;
     height: 550px;
     overflow: scroll;
+    opacity: 75%;
 }
 
 div.coffee {
@@ -67,7 +51,7 @@ div.coffee h1 {
 
 div.coffee p {
     padding-top: 6px;
-    font-size: 20px;
+    font-size: 15px;
     opacity: 1;
     color: black;
 }
@@ -84,10 +68,11 @@ div.coffee p {
     border: 1px solid grey;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    box-shadow: black;
     margin-bottom: 20px;
-    background-color: rgba(188,143,143, .6);
+    background-color: lightgray;
     width: 90%;
+    opacity: 75%;
 }
 
 #roast-selection {
@@ -95,14 +80,14 @@ div.coffee p {
     border-radius: 4px;
     margin-bottom: 10px;
     width: 100%;
-    background-color: rgba(255,222,173, 0.6);
+    background-color: lightblue;
 }
 
 #roast-search {
     border: 1px solid black;
     border-radius: 4px;
     width: 100%;
-    background-color: rgba(255,222,173, 0.5);
+    background-color: lightblue;
 }
 
 .coffee-add {
@@ -113,9 +98,10 @@ div.coffee p {
     border: 1px solid grey;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-    background-color: rgba(188,143,143, .5);
+    box-shadow: black;
+    background-color: lightgray;
     width: 90%;
+    opacity: 75%;
 }
 
 #coffee-add {
@@ -123,7 +109,7 @@ div.coffee p {
     border-radius: 4px;
     width: 100%;
     margin-bottom: 10px;
-    background-color: rgba(255,222,173, 0.5);
+    background-color: lightblue;
 }
 
 #name-add {
@@ -131,21 +117,18 @@ div.coffee p {
     border-radius: 4px;
     width: 100%;
     margin-bottom: 10px;
-    background-color: rgba(255,222,173, 0.5);
+    background-color: lightblue;
 }
 
 #submit1, #submit2 {
-    width: 40%;
+    width: 60%;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: rosybrown;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: lightblue;
+    box-shadow: lightblue;
     transition: all ease .2s;
 }
 
-#submit1:hover, #submit2:hover {
-    scale: 1.05;
-}
 
 label {
     margin-bottom: 0px;
@@ -160,13 +143,22 @@ label {
     padding: 0;
 }
 
-.gif {
-    height: 200px;
-    width: 200px;
-    margin-top: 30px;
-}
 
 form h3 {
     font-size: 20px;
     color: black;
+}
+
+footer{
+    display: flex;
+    padding: 10em 1em 5em 1em;
+
+}
+
+i {
+    font-size: 30px;
+}
+
+footer p {
+    flex-grow: 1;
 }
