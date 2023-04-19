@@ -1,0 +1,253 @@
+/*html{*/
+/*    width: 1600px;*/
+/*    display: block;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*}*/
+
+body {
+    font-family: "monospace", "DecoType Naskh";
+    background-color: black;
+}
+
+#bg-test {
+    width: 80%;
+    min-height: 40em;
+    margin: auto;
+
+
+    background-image: url('/img/konami/contra.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 10%;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-style: oblique ;
+    font-size: 75px;
+    color: red;
+
+}
+
+.para {
+    font-size: 40px;
+    color: red;
+}
+.code {
+    font-size: 40px;
+    color: red;
+}
+
+*      {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+ƒ*/
+  *, *::before, *::after {
+      box-sizing: border-box;
+  }
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+/*Table resets*/
+table th, table td {
+    border: 1px;
+    border-collapse: collapse;
+}
+
+/*revert white space for safari*/
+textarea {
+    white-space: revert;
+}
+
+::placeholder {
+    color: unset;
+    font: inherit;
+}
+
+/* reset list styles*/
+/*ul, ol {*/
+/*    list-style: none;*/
+/*}*/
+
+a, a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: unset;
+}
+
+/*
+    The "page wrapper" is the outermost container for the page. It mimics
+    the behavior of the body tag, but is a div so that it can be styled
+    with more flexibility than the body tag.
+*/
+.page-wrapper {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+/*
+    The "container", sometimes referred to as a "section", is a container
+    element (semantic when applicable) that vertically separates different
+    areas on the page based on their purpose or topic. It can allow different
+    background colors and properties for each section that help users associate
+    content within it as belonging to the same subject.
+*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+/* Combo classes to extend the container's versatility */
+.container.grow {
+    flex: 1 0 0;
+}
+.container.justify-center {
+    justify-content: center;
+}
+.container.justify-bottom {
+    justify-content: end;
+}
+
+/*
+    The "row" is a container element that horizontally separates its
+    children, which are usually columns. It also performs a secondary role
+    of keeping the content of the site within a reasonable width, so that
+    wider screens don't disrupt the intended layout.
+*/
+.row {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    padding: 0 20px;
+    gap: 20px;
+}
+/* Combo classes to extend the row's versatility */
+.row.full-width {
+    max-width: unset;
+}
+.row.align-center {
+    align-items: center;
+}
+.row.align-top {
+    align-items: start;
+}
+.row.align-bottom {
+    align-items: end;
+}
+.row.justify-center {
+    justify-content: center;
+}
+.row.justify-right {
+    justify-content: end;
+}
+.row.justify-space-between {
+    justify-content: space-between;
+}
+.row.no-padding {
+    padding: unset;
+}
+.row.no-gap {
+    gap: unset;
+}
+.row.grow {
+    flex: 1 0 0;
+}
+
+/*
+    The "column" is a container element that vertically separates its
+    children, which are usually content elements. When paired with sibling columns,
+    it allows for the creation of a flexible grid system that can be used
+    to create a variety of layouts.
+*/
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+}
+/* Combo classes to extend the column's versatility */
+.column.shrink {
+    flex: 0 1 auto;
+}
+.column.text-center {
+    text-align: center;
+}
+.column.align-center {
+    align-items: center;
+}
+.column.align-right {
+    align-items: end;
+}
+.column.justify-center {
+    justify-content: center;
+}
+.column.justify-bottom {
+    justify-content: end;
+}
+.column.justify-space-between {
+    justify-content: space-between;
+}
