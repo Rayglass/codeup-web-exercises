@@ -1,9 +1,9 @@
 $('li').hover(
     function() {
-        $(this).css('background-color', 'red');
+        $(this).css('color', 'red');
     },
     function() {
-        $(this).css('background-color', '#FFF');
+        $(this).css('color', 'black');
     }
 );
 
