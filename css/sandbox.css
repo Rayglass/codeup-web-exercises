@@ -1,33 +1,170 @@
 body {
-    color: #444;
-    font: normal 16px Helvetica, Arial, sans-serif;
+    background-color: #F4E8DA;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    background-color: #99532D;
+    font-family: 'Dancing Script', cursive;
+}
+
+#navbar img {
+    width: 60px;
+}
+
+.banner {
+    width: 100%;
+}
+
+#main-header {
+    margin: 2em 0;
+}
+
+#menu-logo {
+    width: 100px;
+    opacity: .8;
+    border-radius: 50%;
+}
+
+.add-coffee {
+    width: 100%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #552214;
+    font-family: 'Dancing Script', cursive;
+}
+
+.form-select {
+    border-color: brown;
+}
+
+.form-control {
+    border-color: brown;
+}
+
+#order, #coffee-submit, #clear, #submit {
+    background-color: #99532D;
+    color: #F4E2CA;
+    border-color: brown;
+}
+
+
+#menu {
+    background-image: url("assets/plain-chalkboard-bg.jpeg");
+    background-size: cover;
+    border: 15px solid #99532d;
+    min-height: 700px;
+    padding: 15px;
+}
+
+#menu img {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+#coffees {
+    color: white;
+    column-count: 2;
+    font-family: 'Great Vibes', cursive;
+    opacity: .8;
     text-align: center;
 }
 
-.code {
-    font-size: 18px;
-    font-weight: bold;
+.form-label {
+    font-family: 'Dancing Script', cursive;
 }
 
-.code span {
-    background: #cccccc; /* Old browsers */
-    background: -moz-linear-gradient(left,  #cccccc 0%, #eeeeee 50%, #cccccc 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#cccccc), color-stop(50%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* IE10+ */
-    background: linear-gradient(to right,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+footer {
+    background-color: #99532D;
+    padding: 1em 0;
+}
 
-    box-shadow: 1px 0 0 #efefef inset, -1px 0 0 #efefef inset;
-    border: 1px solid #bbb;
-    border-bottom: 4px solid #aaa;
-    border-radius: 3px;
-    display: inline-block;
-    height: 24px;
-    padding: 5px;
-    margin: 0 1px;
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: #F4E2CA;
+}
+
+/*GIF STUFF*/
+#gif-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 25px;
+    z-index: 10;
+    background-color: transparent;
     text-align: center;
-    text-shadow: 0 1px 0 #fff;
-    width: 24px;
+}
+
+#gif-popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: .8;
+    pointer-events: all;
+}
+
+#gif-popup img {
+    border-radius: 25px;
+    height: 400px;
+
+}
+
+#gif-popup h3 {
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 15px;
+    color: #552214;
+    font-family: 'Dancing Script', cursive;
+    background-color: #F4E8DA;
+}
+
+/*easter egg*/
+.inactive  {
+    display: none;
+}
+
+@media screen and (min-width:1352px) and (max-width: 1352px){
+    .active-one {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:893px) and (max-width: 893px){
+    .active-two {
+        display: block;
+        margin: 0 auto;
+        color: #552214;
+    }
+}
+
+@media screen and (min-width:1108px) and (max-width: 1108px){
+    .active-three {
+        display: block;
+        margin: 0 auto;
+    }
 }
