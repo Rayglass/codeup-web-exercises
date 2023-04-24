@@ -1,0 +1,45 @@
+
+header {
+    border-bottom: 4px solid black;
+    margin: 20px;
+    padding-bottom: 10px;
+}
+header h1{
+    font-size: 60px;
+    text-align: center;
+}
+section h1 {
+    padding: 10px;
+}
+section dt{
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+/*dd.invisible {*/
+/*    display: none;*/
+/*}*/
+
+.subheader-button-wrapper {
+    margin-bottom: 15px;
+}
+
+.container {
+    margin-top: 25px;
+}
+
+button.highlight-btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    max-width: 200px;
+    cursor: pointer;
+}
+.btn-on {
+    background-color: cornsilk;
+    transition:all .5s ease;
+}
+
+
+.highlight {
+    background-color: #FF0;
+}
