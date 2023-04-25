@@ -78,31 +78,31 @@ button.highlight-btn {
     margin: 20px auto;
     justify-content: space-around;
 }
-.box {
-    height:156px;
-    width:256px;
-    border: black solid 1px;
-    background-color: white;
-    border-radius: 50%;
+/*.box {*/
+    /*height:156px;*/
+    /*width:256px;*/
+    /*border: black solid 1px;*/
+    /*background-color: white;*/
+    /*border-radius: 50%;*/
 }
-#left {
-    height:100%;
-    width:100%;
-    order: 1;
-    background-image: url("/img/yosemite.jpeg");
-    border-radius: 50%;
-}
-#center {
-    height:100%;
-    width:100%;
-    order: 2;
-    background-image: url("/img/yellowstone.jpeg");
-    border-radius: 50%;
-}
-#right {
-    height:100%;
-    width:100%;
-    order: 3;
-    background-image: url("/img/glacier.jpeg");
-    border-radius: 50%;
-}
+/*#left {*/
+/*    height:100%;*/
+/*    width:100%;*/
+/*    order: 1;*/
+/*    background-image: url("/img/yosemite.jpeg");*/
+/*    border-radius: 50%;*/
+/*}*/
+/*#center {*/
+/*    height:100%;*/
+/*    width:100%;*/
+/*    order: 2;*/
+/*    background-image: url("/img/yellowstone.jpeg");*/
+/*    border-radius: 50%;*/
+/*}*/
+/*#right {*/
+/*    height:100%;*/
+/*    width:100%;*/
+/*    order: 3;*/
+/*    background-image: url("/img/glacier.jpeg");*/
+/*    border-radius: 50%;*/
+/*}*/

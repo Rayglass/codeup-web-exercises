@@ -1,69 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Example jQuery Page</title>
-    <style>
-        .centered {
-            text-align: center;
-        }
-        .highlighted {
-            background-color: #FF0;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Weather Map Project</title>
+
+    <script src="../js/keys.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'>
+
+    <!--  Custom CSS Styles -->
+    <link rel="stylesheet" href="css/sandbox.css">
 </head>
 <body>
-<h1>Example Page</h1>
-<div class="centered important highlighted">
-    <h3>NOTICE</h3>
-    <p>This is an important message!</p>
+<div class="page-wrapper">
+    <header class="container">
+        <div class="row justify-center align-center">
+            <h1>Weather Map</h1>
+        </div>
+    </header>
+    <section class="container grow">
+        <div class="row align-center search-row">
+            <form class="form">
+                <label for="search-bar"></label>
+                <input type="text" name="search-bar" id="search-bar" placeholder="Search your city...">
+                <button id="search-btn">SEARCH</button>
+            </form>
+            <div class="column align-right sub-header"></div>
+        </div>
+        <!--weather cards-->
+        <div class="row grow">
+            <div class="column weather-card-1"></div>
+            <div class="column weather-card-2"></div>
+            <div class="column weather-card-3"></div>
+            <div class="column weather-card-4"></div>
+            <div class="column weather-card-5"></div>
+
+        </div>
+        <!--where the map goes-->
+        <div class="row grow map-row no-padding">
+            <div class="column" id="map"></div>
+        </div>
+    </section>
 </div>
-<div class="not-important">
-    <h2>Lorem Ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important highlighted">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
-</div>
-<p class="centered important highlighted">This is also very important.</p>
-<a href="#" id="highlight-important">Click to toggle the highlighting of important text.</a>
 
-<!--jQuery Source Code-->
-<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-
-<script>
-    "use strict";
-
-    $(document).ready(function() {
-        $('#highlight-important').click(function(event) {
-            event.preventDefault();
-            $('.important').toggleClass('highlighted');
-        });
-    });
-
-    $(document).ready(function() {
-
-        $("#button").click(function(){
-            $(".target").effect( "highlight", {color:"#669966"}, 3000 );
-        });
-    });
-
-</script>
+<script src="mapbox-geocoder-utils.js"></script>
+<script src="js/sandbox.js"></script>
 </body>
 </html>
-
-
-
-
-<section class="container section-3">
-    <div class="row">
-        <div class="col-4">
-            <img src="img/yosemite.jpeg" alt="Yosemite">
-            <button>switch</button>
-        </div>
-        <div class="col-4">
-            <img src="img/yellowstone.jpeg" alt="Yellowstone">
-            <button>switch</button>
-        </div>
-        <div class="col-4">
-            <img src="img/glacier.jpeg" alt="Glacier">
-            <button>switch</button>
-        </div>
-    </div>
-</section>

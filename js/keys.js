@@ -1,0 +1,4 @@
+const MAPBOX_KEY = "pk.eyJ1IjoicmF5Z2xhc3MiLCJhIjoiY2xndm05c3BiMDNhMDNmbHA1bHdyNDZ3MyJ9.JvoY35FmARtPswSVAHvgfg";
+const OPEN_WEATHER_APPID = "3d2b1be12d2e0c22f88138fdb8943bd6";
+
+
