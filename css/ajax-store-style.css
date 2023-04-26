@@ -1,0 +1,59 @@
+h1{
+    font-weight: bold;
+    text-align: center;
+    color: #E6563B;
+    text-shadow: 4px 1px black;
+    font-size: 80px;
+}
+button {
+    background-color: white;
+    border-radius: 20px;
+    margin: 1em;
+    padding: 1em;
+}
+
+.jumbotron-fluid {
+    background-image: url("img/tools.jpg");
+    margin-bottom: 10px;
+    height: 200px;
+}
+body {
+    background-color: white;
+
+}
+
+.tools {
+    padding: 3em;
+}
+
+.refresh
+
+#products{
+    padding: 1em;
+    border: black;
+
+}
+
+
+
+td, tr{
+    text-align: center;
+    margin: 20px;
+    border: black solid;
+
+}
+.card {
+    margin: 20px;
+}
+h2{
+    margin: 20px;
+    color: white;
+}
+
+.jumbotron {
+    background-image: url("/img/tools.jpeg");
+    height: 346px;
+    background-size: cover;
+}
+
+

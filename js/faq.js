@@ -3,12 +3,12 @@
 
 // toggles question answers on and off
     let toggleAll = $('.toggleAll');
-    toggleAll.click(function(e){
+    toggleAll.click(function(){
         $('dd').toggleClass('invisible');
         $(this).toggleClass('btn-on');
     });
 
-// highlights individual dt's on click (e-target allows individual elements to be targeted)
+// highlights individual dt on click (e-target allows individual elements to be targeted)
 $('dt').click((e) => {
     const target = e.target
     $(target).toggleClass('highlight')
