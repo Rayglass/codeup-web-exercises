@@ -1,7 +1,24 @@
 
     "use strict"
 
-    let resetMap = document.querySelector('#resetMap');
+    mapboxgl.accessToken =
+        'pk.eyJ1IjoicmF5Z2xhc3MiLCJhIjoiY2xndmtzYmhqMDJxZTNjbXU1cGk3enlpeCJ9.CvCiURzPD2T4YeSY9PEGug';
+
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+        center: [-94.6708, 38.9822], // starting position [lng, lat]
+        zoom: 9, // starting zoom
+    });
+
+    //reset map to Overland Park
+    resetMap.addEventListener('click', function(){
+        map.setCenter([-94.6708, 38.9822]);
+        map.setZoom(9);
+    });
+
+
+    // let resetMap = document.querySelector('#resetMap');
 
     const kpot = {
     Name: 'K-Pot Korean Hot Pot and Grill',
@@ -30,20 +47,22 @@
     //displays 3 of my favorite restaurants with some info about them
     myFavPlacesToEat.forEach((place) => {
     let marker = new mapboxgl.Marker()
-    .setLngLat([place.longitude, place.latitude])
-    .addTo(map);
+        .setLngLat([place.longitude, place.latitude])
+        .addTo(map);
     let popup = new mapboxgl.Popup()
-    .setHTML(`<h4>${place.Name}</h4>
+        .setHTML(`<h4>${place.Name}</h4>
 				They are located in ${place.Location}.
 				My favorite menu item is ${place.Favorite}.`);
+
     marker.setPopup(popup);
 });
 
-    //reset map to san antonio
-    resetMap.addEventListener('click', function(){
-    map.setCenter([-94.6708, 38.9822]);
-    map.setZoom(9);
-});
+$('#favPlace').click(() => {
+    $('.mapboxgl-marker').toggleClass('hidden')
+})
+
+
+
 
 
 
