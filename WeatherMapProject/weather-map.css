@@ -1,0 +1,48 @@
+
+#map {
+    /* the width and height may be set to any size */
+    width: 100%;
+    height: 500px;
+    margin-bottom: 30px;
+    align-content: center;
+    border: black 2px;
+    margin: 2em;
+}
+.hidden {
+    visibility: hidden;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+body {
+    background-image: linear-gradient(275deg, cyan, lightcyan);
+}
+
+button#resetMap {
+    border: 1px solid cyan;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    margin: 4px;
+}
+
+button#favPlace {
+    border: 1px solid cyan;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    margin: 4px;
+}
+
+
+

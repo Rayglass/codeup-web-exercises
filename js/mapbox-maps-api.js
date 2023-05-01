@@ -1,8 +1,7 @@
 
     "use strict"
 
-    mapboxgl.accessToken =
-        'pk.eyJ1IjoicmF5Z2xhc3MiLCJhIjoiY2xndmtzYmhqMDJxZTNjbXU1cGk3enlpeCJ9.CvCiURzPD2T4YeSY9PEGug';
+    mapboxgl.accessToken = MAPBOX_KEY
 
     const map = new mapboxgl.Map({
         container: 'map', // container ID

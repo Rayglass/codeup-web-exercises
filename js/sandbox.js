@@ -220,6 +220,3 @@ window.onload = async function(){
     const defaultCards = await getDefaultData();
     formatWeatherProperties(defaultCards);
 }
-
-
-
