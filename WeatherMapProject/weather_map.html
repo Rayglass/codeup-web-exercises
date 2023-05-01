@@ -19,6 +19,7 @@
   <!-- Mapbox Dependencies -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
   <script src="mapbox-geocoder-utils.js"></script>
   <script src="../js/keys.js"></script>
 
@@ -34,44 +35,71 @@
 
 <!--Start Content-->
 
-<!--Holding Place for Weather Cards-->
-<div class="card">
-  <div class="search">
-    <input type="text" class="search-bar">
-    <button>search</button>
+
+<!--NAVBAR HERE-->
+
+<section id="navbar">
+  <nav class="navbar navbar-light navbar-expand-lg">
+    <div class="container-fluid">
+      <img src="../img/letter_g.png" style="width:100px">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#supportedContent"
+              aria-controls="#supportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" tabindex="-1" id="supportedContent"
+           aria-labelledby="supportedContent">
+        <div class="collapse-body">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="navbar-brand d-block" href="#">Weather Application</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link 1" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link 2" href="#">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link 3" href="#">Resources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
 
 
+<div class="background">
+  <br>
 
-
-
+  <!--SEARCH BAR/BUTTON HERE-->
+  <div id="geocoder" class="geocoder">
+    <label for="search-box"></label>
+    <input type="text" placeholder="Enter a location" id="search-box">
+    <button id="search-btn" type="submit">Search</button>
   </div>
+
+  <br>
+
+  <h3 class="location" id="location-head"></h3>
+
+  <!--WEATHER CARDS HERE-->
+  <div id="weather"></div>
+
+  <br>
 </div>
+<!--MAP HERE-->
+<div id='map'></div>
 
 
 
 
 
 
-
-
-<!--&lt;!&ndash; The HTML element that serves as the Mapbox container &ndash;&gt;-->
-<!--<div class = container>-->
-<!--  <div class = row>-->
-<!--    <div class = column>-->
-<!--      <div id="map"></div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--&lt;!&ndash; The HTML element that serves as the Button container &ndash;&gt;-->
-<!--<div class = container>-->
-<!--  <div class = row>-->
-<!--    <div class = column-3>-->
-<!--      <button id="favPlace">Favorite Places</button>-->
-<!--      <button id="resetMap">Reset Map</button>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
 
 
 
