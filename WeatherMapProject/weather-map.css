@@ -1,22 +1,9 @@
-
-
-.geocoder{
+.navbar{
     display: flex;
-    justify-content: center;
-    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-#search-btn{
-    border-radius: 10px;
-    background: black;
-    color: white;
-    margin-left: 10px;
-}
-#search-box{
-    width: 50%;
-    height: 40px;
-    background: black;
-    color: white;
-}
+
 .background{
     background-image: url("../img/KansasCity.jpeg");
     background-repeat: no-repeat;
@@ -26,6 +13,46 @@
     width: auto;
     height: auto;
 }
+
+.geocoder{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 10px;
+}
+
+#search-btn{
+    border-radius: 10px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+}
+
+#search-box{
+    width: 50%;
+    height: 40px;
+    background: black;
+    color: white;
+}
+
+#weather{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.weatherCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black solid 2px;
+    border-radius: 10px;
+    width: 220px;
+    color: lightgray;
+    background-color: rgba(100, 100, 100, 0.5); /* set a semi-transparent white background */
+    backdrop-filter: blur(2px); /* apply a blur filter to create the frosted effect */
+}
+
 .date{
     display: flex;
     justify-content: center;
@@ -35,16 +62,8 @@
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
 
-}
-.geocoder{
-    padding-left: 10px;
-}
-.navbar{
-    display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 .HR{
     background-color: black;
     height: 2px;
@@ -62,24 +81,3 @@
     /*border: black;*/
     padding: 12px;
 }
-
-#weather{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-
-
-}
-.weatherCards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: black solid 2px;
-    border-radius: 10px;
-    width: 220px;
-    color: lightgray;
-    background-color: rgba(100, 100, 100, 0.5); /* set a semi-transparent white background */
-    backdrop-filter: blur(2px); /* apply a blur filter to create the frosted effect */
-}
-

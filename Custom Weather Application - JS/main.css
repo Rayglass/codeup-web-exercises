@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: lightblue;
+}
+
+/*.cards_wrap {*/
+/*    padding: 20px;*/
+/*    width: 100%;*/
+/*    !*display: grid;*!*/
+/*    !*grid-template-columns: repeat(3, 1fr);*!*/
+/*    !*justify-content: space-around;*!*/
+/*    !*flex-wrap: wrap;*!*/
+/*}*/
+
+/*.cardItem {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 1fr);*/
+/*    padding: 15px 25px;*/
+/*    width: 25%;*/
+/*    margin: 1em;*/
+/*    align-content: space-around;*/
+/*}*/
+
+/*.cardInner {*/
+/*    text-align: center;*/
+/*    align-content: space-evenly;*/
+/*    margin: 2em;*/
+/*    background: #fff;*/
+/*    border-radius: 5px;*/
+/*    padding: 20px 20px;*/
+/*    min-width: 225px;*/
+/*    min-height: 315px;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.date{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    background: lightgray;*/
+/*    color: black;*/
+/*    font-weight: bold;*/
+/*    width: 100%;*/
+/*    border-top-left-radius: 10px;*/
+/*    border-top-right-radius: 10px;*/

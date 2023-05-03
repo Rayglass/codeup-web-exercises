@@ -1,6 +1,4 @@
 
-
-
 //MAPBOX_TOKEN is specified in the keys.js file which is equal to my token
 // define variables for the map and marker
 let map;
