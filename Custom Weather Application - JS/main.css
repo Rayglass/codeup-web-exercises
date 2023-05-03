@@ -3,13 +3,77 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     font-family: 'Poppins', sans-serif;
+
 }
 
-body {
-    background-color: lightblue;
+#wrapper {
+    background: #232427;
+    padding: 40px 0px;
+    min-height: 100vh;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    color: #FFFFFF;
 }
+.row {
+    align-content: center;
+    align-items: center;
+}
+
+
+.card_area {
+    background-color: #232427;
+    margin: 12px;
+    border: 2px solid #232427;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px #15535c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+
+}
+.single_card {
+    align-content: center;
+    background: #313236;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px 0px #151618;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+
+
+}
+
+
+
+
+/*#weather{*/
+
+/*}*/
+
+/*.cardInner {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    border: black solid 2px;*/
+/*    border-radius: 10px;*/
+/*    width: 220px;*/
+/*    padding: 1em;*/
+/*    color: lightgray;*/
+/*    background-color:aliceblue;!* set a semi-transparent white background *!*/
+/*    backdrop-filter: blur(2px); !* apply a blur filter to create the frosted effect *!*/
+/*}*/
 
 /*.cards_wrap {*/
 /*    padding: 20px;*/

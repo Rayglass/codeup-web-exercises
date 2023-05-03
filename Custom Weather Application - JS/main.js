@@ -34,8 +34,8 @@ $.get("https://api.openweathermap.org/data/2.5/forecast", {
     // loop over the forecast data and create a card for each day
     for (let i = 0; i < 40; i += 8) {
         console.log(data.list[i])
-        $('#weather').append("<div class='cardInner'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
-            "<p>" + data.list[i].main.temp_min + " °F" + " / " + data.list[i].main.temp_max + " °F" + "</p>" +
+        $('.card_area').append("<div class='single_card'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
+            "<p>" + data.list[i].main.temp + " °F" + "</p>" +
             "<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>" +
             "<hr class='HR'>" +
             "<p>Description: " + data.list[i].weather[0].description + "<hr class='HR'>" +
