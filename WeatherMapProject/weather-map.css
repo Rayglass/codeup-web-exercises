@@ -1,11 +1,17 @@
-
+body {
+    /*background-color: black;*/
+}
 
 .navbar{
     display: flex;
     padding-left: 10px;
     padding-right: 10px;
     color: #FFFFFF;
+    /*background-color: black;*/
+}
 
+#nav-link-color a {
+    color: black;
 }
 
 .background{
@@ -77,11 +83,12 @@
 }
 
 .HR{
-    background-color: black;
+    background-color: whitesmoke;
     height: 2px;
     width: 95%;
     padding: 0;
     margin: 0;
+    color: whitesmoke;
 }
 
 #map {
