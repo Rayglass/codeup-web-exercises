@@ -26,12 +26,12 @@ $.get("https://api.openweathermap.org/data/2.5/forecast", {
     units: "imperial"
 }).done(function(data) {
     // clear the previous weather data
-    $("#weather").empty();
+    $(".card_area").empty();
 
     // loop over the forecast data and create a card for each day
     for (let i = 0; i < 40; i += 8) {
         console.log(data.list[i])
-        $('#weather').append("<div class='weatherCards'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
+        $('.card_area').append("<div class='weatherCards'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
             "<p>" + data.list[i].main.temp + " °F" + "</p>" +
             "<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>" +
             "<hr class='HR'>" +
@@ -57,11 +57,11 @@ map.on('click', function(click) {
         units: "imperial"
     }).done(function(data) {
         // clear the previous weather data
-        $("#weather").empty();
+        $(".card_area").empty();
 
         // loop over the forecast data and create a card for each day
         for (let i = 0; i < 40; i += 8) {
-            $('#weather').append("<div class='weatherCards'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
+            $('.card_area').append("<div class='weatherCards'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
                 "<p>" + data.list[i].main.temp + " °F" + "</p>" +
                 "<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>" +
                 "<hr class='HR'>" +
@@ -119,11 +119,11 @@ $("#search-btn").click(function () {
                 units: "imperial"
             }).done(function (data) {
                 // clear the previous weather data
-                $("#weather").empty();
+                $(".card_area").empty();
 
                 // loop over the forecast data and create a card for each day
                 for (let i = 0; i < 40; i += 8) {
-                    $('#weather').append("<div class='weatherCards'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
+                    $('.card_area').append("<div class='weatherCards'><p class='date'>" + data.list[i].dt_txt.substring(0, 10) + "</p>" +
                         "<p>" + data.list[i].main.temp + " °F" + "</p>" +
                         "<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>" +
                         "<hr class='HR'>" +
