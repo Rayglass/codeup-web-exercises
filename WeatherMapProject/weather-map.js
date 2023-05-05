@@ -1,4 +1,3 @@
-
 //MAPBOX_TOKEN is specified in the keys.js file which is equal to my token
 // define variables for the map and marker
 let map;
@@ -11,20 +10,20 @@ map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/navigation-night-v1',
     zoom: 10,
-    center: [-94.6708,  38.9822]
+    center: [-94.6708, 38.9822]
 });
 
 // when page loads auto set marker to my home location
-map.on("load", function (){
-    marker.setLngLat([-94.6708,  38.9822]).addTo(map)
+map.on("load", function () {
+    marker.setLngLat([-94.6708, 38.9822]).addTo(map)
 });
 
 // when page loads auto shows the forecast for 5 days at the location
 $.get("https://api.openweathermap.org/data/2.5/forecast", {
     APPID: OPEN_WEATHER_APPID,
-    q:     "Overland Park, US",
+    q: "Overland Park, US",
     units: "imperial"
-}).done(function(data) {
+}).done(function (data) {
     // clear the previous weather data
     $(".card_area").empty();
 
@@ -37,15 +36,14 @@ $.get("https://api.openweathermap.org/data/2.5/forecast", {
             "<hr class='HR'>" +
             "<p>Description: " + data.list[i].weather[0].description + "<hr class='HR'>" +
             "<p>Humidity: " + data.list[i].main.humidity + "%" + "<hr class='HR'>" +
-            "<p>Wind: " + data.list[i].wind.speed +  " mph" + "<hr class='HR'>" + "</p>" +
+            "<p>Wind: " + data.list[i].wind.speed + " mph" + "<hr class='HR'>" + "</p>" +
             "<p>Pressure: " + data.list[i].main.pressure + " Hg" + "</p>")
     }
 });
 
 
-
 // handle the map click event for when click on another location it updates
-map.on('click', function(click) {
+map.on('click', function (click) {
     // set the marker position to the clicked location
     marker.setLngLat(click.lngLat).addTo(map);
 
@@ -55,7 +53,7 @@ map.on('click', function(click) {
         lat: click.lngLat.lat,
         lon: click.lngLat.lng,
         units: "imperial"
-    }).done(function(data) {
+    }).done(function (data) {
         // clear the previous weather data
         $(".card_area").empty();
 
@@ -67,7 +65,7 @@ map.on('click', function(click) {
                 "<hr class='HR'>" +
                 "<p>Description: " + data.list[i].weather[0].description + "</p>" +
                 "<p>Humidity: " + data.list[i].main.humidity + "%" + "<hr class='HR'>" +
-                "<p>Wind: " + data.list[i].wind.speed +  " mph" + "<hr class='HR'>" + "</p>" +
+                "<p>Wind: " + data.list[i].wind.speed + " mph" + "<hr class='HR'>" + "</p>" +
                 "<p>Pressure: " + data.list[i].main.pressure + " Hg" + "</p>")
         }
     });
@@ -75,13 +73,14 @@ map.on('click', function(click) {
 
 // function to have the geocoder update the map when searched location
 document.getElementById("search-btn").addEventListener("click", geocoder);
+
 function geocoder() {
     let location = document.getElementById('search-box').value;
 
     // use the Mapbox Geocoding API to get the latitude and longitude of the location
     $.get("https://api.mapbox.com/geocoding/v5/mapbox.places/" + location + ".json", {
         access_token: MAPBOX_KEY
-    }).done(function(data) {
+    }).done(function (data) {
         // get the latitude and longitude from the response
         let lng = data.features[0].center[0];
         let lat = data.features[0].center[1];
@@ -93,6 +92,7 @@ function geocoder() {
 
     });
 }
+
 $("#search-btn").click(function () {
     let searchQuery = $("#search-box").val();
     if (searchQuery.length > 0) {
@@ -129,7 +129,7 @@ $("#search-btn").click(function () {
                         "<hr class='HR'>" +
                         "<p>Description: " + data.list[i].weather[0].description + "</p>" +
                         "<p>Humidity: " + data.list[i].main.humidity + "%" + "<hr class='HR'>" +
-                        "<p>Wind: " + data.list[i].wind.speed +  " mph" + "<hr class='HR'>" + "</p>" +
+                        "<p>Wind: " + data.list[i].wind.speed + " mph" + "<hr class='HR'>" + "</p>" +
                         "<p>Pressure: " + data.list[i].main.pressure + " Hg" + "</p>")
                 }
 
