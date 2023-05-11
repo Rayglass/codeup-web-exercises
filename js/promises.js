@@ -29,3 +29,5 @@ wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 
 
 //TODO make sure the promise resolves with the milliseconds in return, so you can make the console log message more dynamic.
+
+

@@ -3,13 +3,40 @@
 
     const urlMovies = 'https://lopsided-thrilling-leopon.glitch.me/movies';
 
+    let moviesObj = [];
+
+// -------- loading animation -------
+    function hideLoader() {
+        $('#loading').hide();
+    }
+
+    function showLoader() {
+        $('#loading').show();
+    }
+
+// ---------- add poster -----------
+    function addPoster(poster, id) {
+        let imgID = '#poster-' + id.toString();
+        $(`${imgID}`).attr('src', poster);
+    };
+
+    function getPoster(title, id) {
+        fetch(`http://www.omdbapi.com/?t=${title}&apikey=${OMDb_API}`)
+            .then(res => res.json())
+            .then(data => {
+                if (typeof data.Poster === "string") {
+                    addPoster(data.Poster, id)
+                }
+            })
+    };
+
 // ---------- create cards -----------
     function createCards(movie) {
         $('#card-area').append(`
-             <div id="movie-${movie.id}" class="card-group m-2" style="width: 15rem;">
-               <img src="img/poster-placeholder.jpg" class="card-img-top" style="height: 220px" alt="...">
+             <div id="movie-${movie.id}" class="movie-cards card-group m-2" style="width: 15rem;">
+               <img id="poster-${movie.id}" src="img/poster-placeholder.jpg" class="card-img-top" style="height: 326px;" " alt="...">
              <div class="card-body d-flex row" style="height: 250px">
-             <div class="align-items-start">
+             <div id="movie-info${movie.id}" class="align-items-start">
                <h5 class="card-title">${movie.title}</h5>
                <p class="card-text m-1">Director: ${movie.director}</p>
                <p class="card-text m-1">Genre: ${movie.genre}</p>
@@ -18,7 +45,7 @@
                
 <!--               edit button-->
                 <div class="dropdown d-grid align-items-end">
-                  <button class="btn btn-danger" type="button" id="edit-movie${movie.id}" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-danger btn-sm" type="button" id="edit-movie${movie.id}" data-bs-toggle="dropdown" aria-expanded="false">
                     Edit Movie
                   </button>
                   <ul class="dropdown-menu" style="width: 400px;" aria-labelledby="edit-movie${movie.id}">
@@ -50,21 +77,29 @@
                 </div>
              </div>
              </div>`)
+        getPoster(movie.title, movie.id);
+// hide loading animation
+        hideLoader();
     }
 
 // ----------- fetch data -------------
     function getMovies() {
         $('#card-area').html('');
-        fetch(urlMovies)
-            .then(res => res.json())
-            .then(data => data.forEach(movie => {
-                console.log(movie)
-                createCards(movie);
-            }))
+        showLoader();
+        moviesObj.length = 0;
+        setTimeout(() => {
+            fetch(urlMovies)
+                .then(res => res.json())
+                .then(data => data.forEach(movie => {
+                    moviesObj.push(movie);
+                }))
+                .then(() => {
+                    moviesObj.forEach(createCards);
+                })
+        }, 1000);
     };
 
 // ------------ add movie -----------------
-
     function addMovie(movieData) {
         const optionsPOST = {
             method: 'POST',
@@ -87,7 +122,6 @@
             "rating": $('#input-rating').val(),
             "genre": $('#input-genre').val()
         }
-        console.log(movieAdded);
         addMovie(movieAdded);
     });
 
@@ -98,31 +132,35 @@
             headers: {
                 'Content-Type': 'application/json',
             },
-            // body: JSON.(${id})
         };
         fetch(urlMovies + `/${id}`, optionsDelete)
             .then(response => console.log(response))
             .catch(error => console.error(error))
-            .then(() => getMovies())
     };
 
     $('body').on('click', '.deleteButton', function (e) {
         e.preventDefault();
-        var id = $(this).attr('value');
-        console.log(id);
-        let movieDelete = {
-            "title": $(`#edit-title${id}`).val(),
-            "director": $(`#edit-director${id}`).val(),
-            "rating": $(`#edit-rating${id}`).val(),
-            "genre": $(`#edit-genre${id}`).val(),
-            "id": id
-        }
-        console.log(movieDelete);
+        let id = $(this).attr('value');
+        let remove = `#movie-` + id.toString()
+        $(`${remove}`).remove();
+        let movIndex = moviesObj.findIndex((mov => mov.id == id));
+        moviesObj.splice(movIndex, 1);
         deleteMovie(id);
     });
 
 
 // ----------- edit movie -------------
+    function updateMovie(movie) {
+        let id = '#movie-info' + movie.id;
+        $(`${id}`).html(`
+        <h5 class="card-title">${movie.title}</h5>
+        <p class="card-text m-1">Director: ${movie.director}</p>
+        <p class="card-text m-1">Genre: ${movie.genre}</p>
+        <p class="card-text m-1">Rating: ${movie.rating}</p>
+        `)
+        let movIndex = moviesObj.findIndex((mov => mov.id == movie.id));
+        moviesObj[movIndex] = movie;
+    }
 
     function editMovie(movieData) {
         const optionsEdit = {
@@ -135,13 +173,11 @@
         fetch(urlMovies + `/${movieData.id}`, optionsEdit)
             .then(response => console.log(response))
             .catch(error => console.error(error))
-            .then(() => getMovies())
     };
 
     $('body').on('click', '.saveButton', function (e) {
         e.preventDefault();
         var id = $(this).attr('value');
-        console.log(id);
         let movieEdit = {
             "title": $(`#edit-title${id}`).val(),
             "director": $(`#edit-director${id}`).val(),
@@ -149,29 +185,30 @@
             "genre": $(`#edit-genre${id}`).val(),
             "id": id
         }
-        console.log(movieEdit);
+        updateMovie(movieEdit);
         editMovie(movieEdit);
     });
 
+// ----------- sort movies -------------
+    $('#sort-movies').click(function (e) {
+        e.preventDefault();
+        moviesObj.sort((a, b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
+        $('#card-area').html('');
+        moviesObj.forEach(createCards);
+    });
 
-    // ----------- search movie -------------
+// ----------- search movie -------------
 
-const movieList = document.getElementById('getMovies');
-const searchBar = document.getElementById('searchBar');
+    const movieList = document.getElementById('getMovies');
+    const searchBar = document.getElementById('searchBar');
 
     console.log(searchBar);
 
-searchBar.addEventListener('keyup', (e) => {
-    console.log(e);
-
-})
-
+    searchBar.addEventListener('keyup', (e) => {
+        console.log(e);
+    })
 
 // ---------- first call ----------
-    function hideLoader() {
-        $('#loading').hide();
-        getMovies();
-    }
-    setTimeout(hideLoader, 2000); //change to hide after fetch data comes back
+    getMovies();
 
 })();
