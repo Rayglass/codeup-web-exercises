@@ -8,11 +8,11 @@
 // -------- loading animation -------
     function hideLoader() {
         $('#loading').hide();
-    }
+    };
 
     function showLoader() {
         $('#loading').show();
-    }
+    };
 
 // ---------- add poster -----------
     function addPoster(poster, id) {
@@ -80,7 +80,7 @@
         getPoster(movie.title, movie.id);
 // hide loading animation
         hideLoader();
-    }
+    };
 
 // ----------- fetch data -------------
     function getMovies() {
@@ -92,6 +92,8 @@
                 .then(res => res.json())
                 .then(data => data.forEach(movie => {
                     moviesObj.push(movie);
+                    // console.log(movie);
+
                 }))
                 .then(() => {
                     moviesObj.forEach(createCards);
@@ -112,7 +114,7 @@
             .then(response => console.log(response))
             .catch(error => console.error(error))
             .then(() => getMovies())
-    }
+    };
 
     $('#create-movie-btn').click(function (e) {
         e.preventDefault();
@@ -148,7 +150,6 @@
         deleteMovie(id);
     });
 
-
 // ----------- edit movie -------------
     function updateMovie(movie) {
         let id = '#movie-info' + movie.id;
@@ -160,7 +161,7 @@
         `)
         let movIndex = moviesObj.findIndex((mov => mov.id == movie.id));
         moviesObj[movIndex] = movie;
-    }
+    };
 
     function editMovie(movieData) {
         const optionsEdit = {
@@ -190,25 +191,43 @@
     });
 
 // ----------- sort movies -------------
-    $('#sort-movies').click(function (e) {
+    $('#sort-title').click(function (e) {
         e.preventDefault();
         moviesObj.sort((a, b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
         $('#card-area').html('');
         moviesObj.forEach(createCards);
     });
 
+    $('#sort-director').click(function (e) {
+        e.preventDefault();
+        moviesObj.sort((a, b) => (a.director > b.director) ? 1 : ((b.director > a.director) ? -1 : 0));
+        $('#card-area').html('');
+        moviesObj.forEach(createCards);
+    });
+
+    $('#sort-genre').click(function (e) {
+        e.preventDefault();
+        moviesObj.sort((a, b) => (a.genre > b.genre) ? 1 : ((b.genre > a.genre) ? -1 : 0));
+        $('#card-area').html('');
+        moviesObj.forEach(createCards);
+    });
+
 // ----------- search movie -------------
-
-    const movieList = document.getElementById('getMovies');
-    const searchBar = document.getElementById('searchBar');
-
-    console.log(searchBar);
-
-    searchBar.addEventListener('keyup', (e) => {
-        console.log(e);
-    })
+    $('#searchBar').keyup(function (e) {
+        e.preventDefault();
+        let searchString = searchBar.value.toLowerCase();
+        let filteredMovies = [];
+        for(let i=0; i<moviesObj.length; i++) {
+            if (moviesObj[i].title.toLowerCase().includes(searchString) || moviesObj[i].genre.toLowerCase().includes(searchString) || moviesObj[i].rating.toString().includes(searchString)) {
+                filteredMovies.push(moviesObj[i]);
+            }
+        };
+        $('#card-area').html('');
+        filteredMovies.forEach(createCards);
+    });
 
 // ---------- first call ----------
     getMovies();
+
 
 })();
