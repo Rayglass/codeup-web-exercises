@@ -1,1 +1,3 @@
 # codeup-web-exercises
+
+Welcome to the Codeup Web Exercises (JavaScript, HTML, and CSS)! This repository contains a collection of exercises designed to help practice and improve my skills in JavaScript programming, HTML markup, and CSS styling. These exercises cover various topics and concepts in web development, including variables, functions, DOM manipulation, event handling, HTML tags, CSS selectors, and styling techniques.
