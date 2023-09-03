@@ -46,12 +46,9 @@ body {
 }
 
 
-
-
-
 .card_area{
-    margin: 12px;
-    padding: 12px;
+    margin: 13px;
+    padding: 13px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
